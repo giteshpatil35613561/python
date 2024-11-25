@@ -1,0 +1,12 @@
+import folium 
+
+my_map = folium.Map(location=[16.9902, 73.3120], zoom_start=12) 
+
+folium.Marker([16.9902, 73.3120], popup='Ratnagiri').add_to(my_map) 
+
+folium.Marker([20.9042, 74.7749], popup='Dhule').add_to(my_map) 
+
+folium.PolyLine(locations=[(16.9902, 73.3120), (20.9042, 74.7749)], 
+line_opacity=0.5).add_to(my_map) 
+
+my_map
