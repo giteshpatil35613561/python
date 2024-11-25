@@ -1,0 +1,14 @@
+import folium
+
+# Create a map centered on Dhule, Maharashtra, India
+maharashtra_map = folium.Map(location=[20.9042, 74.7749], zoom_start=10)
+
+# Add markers
+folium.Marker([20.9042, 74.7749], popup="Dhule").add_to(maharashtra_map)
+folium.Marker([20.5500, 74.5333], popup="Malegaon").add_to(maharashtra_map)
+folium.Marker([21.0067, 75.5626], popup="Jalgaon").add_to(maharashtra_map)
+folium.Marker([19.9975, 73.7898], popup="Nasik").add_to(maharashtra_map)
+folium.Marker([19.8762, 75.3433], popup="Aurangabad").add_to(maharashtra_map)
+
+# Display the map
+maharashtra_map
