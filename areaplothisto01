@@ -1,0 +1,20 @@
+%matplotlib inline
+
+import matplotlib.pyplot as plt
+import numpy as np
+
+x = range(1, 6)
+y = [1, 4, 6, 8, 4]
+
+plt.fill_between(x, y, color="red")
+plt.show()
+#histogram
+import matplotlib.pyplot as plt
+import numpy as np
+data = np.random.randn(1000)
+
+plt.hist(data,bins=30,color="blue",edgecolor="black")
+plt.xlabel("values")
+plt.ylabel("frqency")
+plt.title("here is the data")
+plt.show()
