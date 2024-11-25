@@ -1,0 +1,42 @@
+import pandas as pd 
+import numpy as np
+data ={
+    "name":["om","gitesh","shashi","pavany"],
+     "age":[14,58,36,50],
+     "city":["dhule","omini","newwork","hoongkong"],
+}
+df=pd.DataFrame(data)
+df.head()
+#step1
+df.info()
+#step2
+df.describe()
+#step3
+df["age_in_month"]=df["age"]*12 
+print(df)
+#step4
+filtered_df = df[df["age"] < 30]
+filtered_df
+#step5
+sorted_df = df.sort_values(by="age")
+df.loc[2,'city']=np.nan
+print(df)
+#step6
+df["city"].fillna("unko")
+print(df)
+#step7
+df.to_csv("mani_data.csv",index=True)
+#step8
+data_list=[10,20,30,40]
+series_list=pd.Series(data_list,name="values")
+series_list
+#step9
+data_dict={'A':100,'B':200,'C':300,'D':400}
+series_dict=pd.Series(data_dict,name="Scores")
+print(series_dict)
+
+value_at=series_list[2]
+value_at
+
+series_a=series_dict['A']
+series_a
