@@ -1,0 +1,14 @@
+from wordcloud import WordCloud
+import matplotlib.pyplot as plt
+
+text = "python is programming language for data analysis and visualization. Python for machine learning, web development, and more."
+
+# Generate the word cloud
+wordcloud = WordCloud(width=800, height=400, background_color='white').generate(text)
+
+# Display the word cloud
+plt.figure(figsize=(10, 5))
+plt.imshow(wordcloud, interpolation='bilinear')
+plt.axis("off")
+plt.show()
+
