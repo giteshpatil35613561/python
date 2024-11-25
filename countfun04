@@ -1,0 +1,29 @@
+import pandas as pd 
+import numpy as np
+data ={
+    "name":["omesh","gitesh","om1","om2"],
+    "age":["20","25","30","35"],
+    "city":["dhule","mumbai","newwork","hongkong"],
+            }
+df=pd.DataFrame(data)
+print(df)
+#for counr non_null
+count_c=df.count()
+print("count non null",count_c)
+#description
+description=df.describe(include="all")
+print("Statistical description",description)
+#duplicates
+duplicate=df.drop_duplicates()
+print("duplicates are:",duplicate)
+#empty
+is_empty=df.empty
+print("the empty section are",is_empty)
+#filter
+filtered = df[df["city"] == "mumbai"]
+print("The filtered city is:")
+print(filtered)
+#copy
+df_copy=df.copy()
+are_equal=df.equals(df_copy)
+print("are the origanal",are_equal)
