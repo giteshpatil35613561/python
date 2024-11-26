@@ -1,0 +1,31 @@
+def decimal_to_binary(ip_address):
+    try:
+        # Split IP address into octets and convert each to an 8-bit binary string
+        binary_ip = '.'.join(format(int(octet), '08b') for octet in ip_address.split('.'))
+        return binary_ip
+    except ValueError:
+        return "Invalid decimal IP address!"
+
+def binary_to_decimal(binary_ip):
+    try:
+        # Split binary IP into octets and convert each to decimal
+        decimal_ip = '.'.join(str(int(octet, 2)) for octet in binary_ip.split('.'))
+        return decimal_ip
+    except ValueError:
+        return "Invalid binary IP address!"
+
+# User Input
+print("Choose an option:")
+print("1: Convert Decimal IP to Binary")
+print("2: Convert Binary IP to Decimal")
+
+choice = input("Enter 1 or 2: ")
+
+if choice == '1':
+    decimal_ip = input("Enter a decimal IP address (e.g., 192.168.1.1): ")
+    print(f"Binary representation: {decimal_to_binary(decimal_ip)}")
+elif choice == '2':
+    binary_ip = input("Enter a binary IP address (e.g., 11000000.10101000.00000001.00000001): ")
+    print(f"Decimal representation: {binary_to_decimal(binary_ip)}")
+else:
+    print("Invalid choice! Please enter 1 or 2.")
